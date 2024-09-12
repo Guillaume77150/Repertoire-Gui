@@ -19,7 +19,34 @@ namespace Serie_III
             string path = Directory.GetCurrentDirectory();
             string input = path + @"\class.csv";
             string output = path + @"\result.csv";
-            ClassCouncil.SchoolMeans(input, output);
+            
+            using (FileStream fs = File.Create(input))
+            using (StreamWriter writer = new StreamWriter(fs))
+            {
+
+                /*
+                string line2 = Console.ReadLine();
+                string line3 = Console.ReadLine();
+                string line4 = Console.ReadLine();
+                string line5 = Console.ReadLine();
+                */
+               
+                writer.WriteLine("Marc;Histoire;14,5") ;
+                writer.WriteLine("Jean;Maths;13,5");
+                writer.WriteLine("Alice;Maths;16,0");
+                writer.WriteLine("Superman;Maths;19");
+                writer.WriteLine("Eloise;Histoire;08,5");
+                writer.WriteLine("Edouard;Francais;1,5");
+                writer.WriteLine(" ;Francais;3,5");
+                writer.WriteLine("-;Maths;12,0");
+                writer.WriteLine("yeah;Histoire;75");
+                writer.WriteLine("ok;Histoire;08,5");
+
+            }
+
+
+
+                ClassCouncil.SchoolMeans(input, output);
             #endregion
 
             #region Exercice II - Performances des tris
