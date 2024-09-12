@@ -31,17 +31,17 @@ namespace Serie_III
                 string line5 = Console.ReadLine();
                 */
                
-                writer.WriteLine("Marc;Histoire;14,5") ;
-                writer.WriteLine("Jean;Maths;13,5");
-                writer.WriteLine("Alice;Maths;16,0");
+                writer.WriteLine("Marc;Histoire;14.5") ;
+                writer.WriteLine("Jean;Maths;13.5");
+                writer.WriteLine("Alice;Maths;16.0");
                 writer.WriteLine("Superman;Maths;19");
-                writer.WriteLine("Eloise;Histoire;08,5");
-                writer.WriteLine("Edouard;Francais;1,5");
-                writer.WriteLine(" ;Francais;3,5");
-                writer.WriteLine("-;Maths;12,0");
+                writer.WriteLine("Eloise;Histoire;08.5");
+                writer.WriteLine("Edouard;Francais;1.5");
+                writer.WriteLine(" ;Francais;3.5");
+                writer.WriteLine("-;Maths;12.00");
                 writer.WriteLine("yeah;Histoire;75");
-                writer.WriteLine("ok;Histoire;08,5");
-
+                writer.WriteLine("ok;Histoire;08.5");
+                writer.WriteLine("Guik;SUPAASMASHUBORTHEEEEEEEEERRRRRRRRRRMEEELEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!!;11");
             }
 
 
@@ -65,10 +65,30 @@ namespace Serie_III
             SortingPerformance.DisplayPerformances(sizes, count);
             #endregion
 
+
             // Keep the console window open
             Console.WriteLine("----------------------");
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
+        }
+    }
+}
+
+namespace Serie_IV
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            #region E2S4 - bracket control
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("Exercice II : Contrôle des parenthèses");
+            Console.WriteLine("--------------------------------");
+
+            string Phrase = "J'imagine qu'il faut faire une phrase bien complexe avec ( des parenthèse ) ouvertes (( et fermés) mais avec aussi des brack{ets}, des accolades {{)} et plein de bonnes choses {{([[]]]]]))}}[[";
+            BracketsControl.BracketsControls(Phrase);
+            #endregion
         }
     }
 }

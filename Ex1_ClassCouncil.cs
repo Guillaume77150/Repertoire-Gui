@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Globalization;
 
 namespace Serie_III
 {
@@ -31,7 +32,7 @@ namespace Serie_III
                     Nom.Add(values[0]);
                     Matiere.Add(values[1]);
                     //On convertit directement les notes en float
-                    Note.Add(float.Parse(values[2]));
+                    Note.Add(float.Parse(values[2],CultureInfo.InvariantCulture));
                 }
                 // Récupération des valeurs distinctes dans matieres
                 List<string> MatDis = new List<string>();
